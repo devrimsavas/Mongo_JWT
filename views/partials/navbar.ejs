@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container-fluid">
+        <!-- Left column for the navigation items -->
+        <div class="col">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cars">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users">User Detail</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right column for the user info and login/logout -->
+        <div class="col text-end">
+            <span class="navbar-text mr-3">
+                USER: <%= user.name %>
+            </span>
+
+            <% if (user.name !=='Guest User' ) { %>
+                <a class="btn btn-danger" href="/logout">Logout</a>
+                <% } else { %>
+                    <a class="btn btn-primary" href="/login">Login</a>
+                    <% } %>
+        </div>
+    </div>
+</nav>

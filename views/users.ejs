@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/header') %> <!-- Your Bootstrap and other CSS from header.ejs -->
+        <title>
+            <%= title %>
+        </title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs') %>
+        <div class="container mt-5">
+            <h1>User Profile</h1>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="<%= user.picture %>" alt="User Profile Picture" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: <%= user.name %>
+                            </h5>
+                            <p class="card-text">Nickname: <%= user.nickname %>
+                            </p>
+                            <p class="card-text">Email: <%= user.email %>
+                            </p>
+                            <p class="card-text">User ID: <%= user.sub %>
+                            </p>
+                            <p class="card-text"><small class="text-muted">Last updated: <%= new
+                                        Date(user.updated_at).toLocaleString() %></small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+
+
+</body>
+
+</html>

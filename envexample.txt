@@ -1,0 +1,9 @@
+
+MONGO_URL=mongodb+srv://<user name>:<user password>@cluster0.qvwiq.mongodb.net/mydb?retryWrites=true&w=majority&appName=Cluster0;
+MONGO_DB_NAME=<database name>
+MONGO_COLLECTION_NAME=<collectin name>
+
+
+
+
+ 

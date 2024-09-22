@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/header.ejs') %>
+    <title>
+      <%= title %>
+    </title>
+</head>
+
+<body>
+  <%- include('./partials/navbar.ejs') %>
+
+    <div class="container-fluid mt-5 border p-4">
+      <h1 class="text-center">
+        <%= title %>
+      </h1>
+      <p class="text-center">Welcome to the <%= title %> tutorial app!</p>
+
+      <div class="mt-4 text-center">
+        <p>This is a demonstration of MongoDB CRUD (Create, Read, Update, Delete) operations as part of Noroff Lesson
+          1.4.
+          You can view cars and perform various actions if you're logged in.</p>
+      </div>
+
+      <div class="mt-4 text-center">
+        <p><strong>User Status:</strong>
+          <%= user.name %>
+        </p>
+      </div>
+
+      <div class="mt-4 text-center">
+        <p><strong>Instructions:</strong> To add, delete, or update cars, you must log in. If not logged in, you will
+          only
+          be able to view the cars.</p>
+      </div>
+
+      <div class="mt-4 text-center">
+        <p><strong>CRUD Operations:</strong></p>
+        <ul class="list-unstyled">
+          <li><strong>Create:</strong> Add a new car to the list (requires login).</li>
+          <li><strong>Read:</strong> View the list of cars (available for all users).</li>
+          <li><strong>Update:</strong> Modify car details (requires login).</li>
+          <li><strong>Delete:</strong> Remove a car from the list (requires login).</li>
+        </ul>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="/cars" class="btn btn-primary">View Cars</a>
+      </div>
+    </div>
+
+    <script src="/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap via npm -->
+</body>
+
+</html>

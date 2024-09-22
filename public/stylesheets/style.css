@@ -1,0 +1,29 @@
+body {
+  padding: 00px;
+}
+
+.caritems:hover {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.markedforoperation {
+  background-color: red !important;
+  font-size: larger;
+  border-style: solid;
+  font-weight: bolder;
+  color: red !important;
+}
+
+.nav-link {
+  font-size: 25px;
+}
+
+.nav-link:hover {
+  font-size: 26px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

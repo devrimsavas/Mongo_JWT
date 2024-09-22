@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/header') %> <!-- Including your header partial -->
+        <title>Car List</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <!-- Left side: Car form -->
+                <% if (user.name !=='Guest User' ) { %>
+                    <div class="col-md-6">
+                        <%- include('./partials/addnewcarform.ejs') %> <!-- Car form occupies 6 columns -->
+                    </div>
+                    <% } %>
+
+                        <!-- Right side: Car list -->
+                        <div class="col-md-6 border shadow p-4 rounded">
+                            <h2>Car List</h2>
+                            <p>Double Click to login to add, delete, or update cars</p>
+                            <% if (user.name=='Guest User' ) { %>
+
+                                <p> You will see only existed car list if you have not logged</p>
+                                <% } %>
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Car Type</th>
+                                                <th>Horsepower (HP)</th>
+                                                <th>Fuel Efficiency (L/100km)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% cars.forEach(function(car) { %>
+                                                <tr class="caritems">
+                                                    <td>
+                                                        <%= car.type %>
+                                                    </td>
+                                                    <td>
+                                                        <%= car.HP %>
+                                                    </td>
+                                                    <td>
+                                                        <%= car.HPl100 %>
+                                                    </td>
+                                                </tr>
+                                                <% }); %>
+                                        </tbody>
+                                    </table>
+                        </div>
+            </div>
+        </div>
+
+        <script src="/javascripts/addnewcar.js"></script>
+        <script src="/javascripts/deletecar.js"></script>
+        <script src="/javascripts/updatecar.js"></script>
+        <script src="/javascripts/canceloperation.js"></script>
+</body>
+
+</html>

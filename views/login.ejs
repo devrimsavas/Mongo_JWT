@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/header') %> <!-- Including your header partial -->
+        <title>Login</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Login</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Click the button below to log in with Auth0:</p>
+                        <!-- When clicked, this redirects to /login-auth0 which triggers Auth0 login -->
+                        <a href="/login-auth0" class="btn btn-primary">Login with Auth0</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap via npm -->
+</body>
+
+</html>

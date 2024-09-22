@@ -1,0 +1,21 @@
+<div class="border shadow p-4 rounded">
+    <h2>Add Delete Update</h2>
+    <form id="addCarForm">
+        <div class="  mb-3">
+            <label for="type" class="form-label">Car Type</label>
+            <input type="text" class="form-control" id="type" name="type" required>
+        </div>
+        <div class="mb-3">
+            <label for="HP" class="form-label">Horsepower (HP)</label>
+            <input type="number" class="form-control" id="HP" name="HP" required>
+        </div>
+        <div class="mb-3">
+            <label for="HPl100" class="form-label">Fuel Efficiency (HPl100)</label>
+            <input type="number" class="form-control" id="HPl100" name="HPl100" step="0.01" required>
+        </div>
+        <button type="submit" id="addnewcarbutton" class="btn btn-primary">Add Car</button>
+        <button type="submit" id="updatecarbutton" class="btn btn-warning">Update Car</button>
+        <button type="submit" id="deletecarbutton" class="btn btn-danger">Delete Car</button>
+        <button type="submit" id="canceloperationbutton" class="btn btn-secondary">Cancel Operation</button>
+    </form>
+</div>
