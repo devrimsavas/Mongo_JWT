@@ -5,6 +5,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const cors = require("cors");
 // import auth0
 const { requiresAuth, userMiddleware } = require("./requiresAuth");
 
@@ -18,6 +19,7 @@ var carRouter = require("./routes/cars");
 var authRouter = require("./routes/auth");
 
 var app = express();
+app.use(cors());
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
