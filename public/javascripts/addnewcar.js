@@ -1,6 +1,7 @@
 //add new car
 
 $(document).ready(function () {
+  const baseOrigin = window.location.origin;
   const testData = $("#addCarForm").find("input");
   console.log(testData);
   testData.each(() => {
@@ -22,7 +23,7 @@ $(document).ready(function () {
     console.log(`car object ${carData.type}`);
 
     //fetch
-    fetch("http://localhost:3000/cars", {
+    fetch(`${baseOrigin}/cars`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(carData),

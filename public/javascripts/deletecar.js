@@ -1,5 +1,6 @@
 $("document").ready(function () {
   let targetId; // Declare targetId in a scope accessible by both event handlers
+  const baseOrigin = window.location.origin;
 
   // Handle double-click on car items
   $(".caritems").on("dblclick", function () {
@@ -13,7 +14,7 @@ $("document").ready(function () {
     const encodedCarType = encodeURIComponent(carType);
 
     // Fetch one car by car type
-    fetch(`http://localhost:3000/cars/findone/${encodedCarType}`)
+    fetch(`${baseOrigin}/cars/findone/${encodedCarType}`)
       .then((response) => {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -56,7 +57,7 @@ $("document").ready(function () {
     }
 
     // Fetch request to delete the car using targetId in the body
-    fetch("http://localhost:3000/cars", {
+    fetch(`${baseOrigin}/cars`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ existedId: targetId }), // Send targetId in the request body
